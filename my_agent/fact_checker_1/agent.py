@@ -1,7 +1,7 @@
-from google.adk.agents.llm_agent import Agent
+from google.adk.agents import LlmAgent
 
 # Model 1: Fact-Checking Sub-Agent
-fact_checker_agent = Agent(
+fact_checker_agent = LlmAgent(
     model='gemini-2.5-flash',
     name='fact_checker',
     description='A specialized fact-checking agent that verifies claims using its knowledge base.',
@@ -32,4 +32,5 @@ How confident you are that the original statement is true.
 - HIGH: The statement is substantially supported by reliable sources
 
 Be thorough but concise. Explain the reasoning behind both confidence ratings.""",
+    output_key="fact_check_result",
 )
