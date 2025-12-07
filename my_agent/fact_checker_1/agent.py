@@ -2,7 +2,7 @@ from google.adk.agents.llm_agent import Agent
 
 # Model 1: Fact-Checking Sub-Agent
 fact_checker_agent = Agent(
-    model='gemini-2.0-flash',
+    model='gemini-2.5-flash',
     name='fact_checker',
     description='A specialized fact-checking agent that verifies claims using its knowledge base.',
     instruction="""You are a fact-checking specialist. When given a statement or claim, you should:
