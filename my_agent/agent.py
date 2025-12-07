@@ -3,7 +3,7 @@ from .fact_checker_1.agent import fact_checker_agent
 
 # Root Agent
 root_agent = Agent(
-    model='gemini-2.0-flash',
+    model='gemini-2.5-flash',
     name='root_agent',
     description='A helpful assistant that can verify facts and answer user questions.',
     instruction="""You are a helpful assistant that answers user questions.
