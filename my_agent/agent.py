@@ -1,5 +1,5 @@
 from google.adk.agents.llm_agent import Agent
-from .fact_checker.agent import fact_checker_agent
+from .fact_checker_1.agent import fact_checker_agent
 
 # Root Agent
 root_agent = Agent(

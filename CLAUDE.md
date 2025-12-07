@@ -185,7 +185,7 @@ givago-multi-agent/
 │   ├── __init__.py          # Package initialization
 │   ├── agent.py             # Root agent definition
 │   ├── .env                 # Environment variables
-│   └── fact_checker/
+│   └── fact_checker_1/
 │       ├── __init__.py      # Package initialization
 │       └── agent.py         # Fact-checker agent (Model 1)
 ├── CLAUDE.md                # This documentation file
@@ -240,21 +240,21 @@ new_specialist_agent = Agent(
 )
 ```
 
-4. Import and add it to the root agent's delegates in `my_agent/agent.py`:
+4. Import and add it to the root agent's sub_agents in `my_agent/agent.py`:
 ```python
 from google.adk.agents.llm_agent import Agent
-from .fact_checker.agent import fact_checker_agent
+from .fact_checker_1.agent import fact_checker_agent
 from .new_agent_name.agent import new_specialist_agent
 
 root_agent = Agent(
     # ... other config ...
-    delegates=[fact_checker_agent, new_specialist_agent],
+    sub_agents=[fact_checker_agent, new_specialist_agent],
 )
 ```
 
 ### Modifying Fact-Checker Behavior
 
-Edit the `instruction` parameter in the `fact_checker_agent` definition in [my_agent/fact_checker/agent.py](my_agent/fact_checker/agent.py) to adjust:
+Edit the `instruction` parameter in the `fact_checker_agent` definition in [my_agent/fact_checker_1/agent.py](my_agent/fact_checker_1/agent.py) to adjust:
 - How liberally claims are interpreted
 - What sources are prioritized
 - Rating criteria
