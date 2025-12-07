@@ -1,7 +1,15 @@
+from typing import List
 from pydantic import BaseModel, Field
 
-# Input schema used by both agents
+# 1. The output of a single Checker Agent
 class FactCheckerFormat(BaseModel):
-    modelConfidence: str = Field(description="The confidence level of the facts provided. (Low,Medium,High)")
-    statementConfidence: str = Field(description="The confidence level for the given fact to evaluate. (Low,Medium,High)")
-    reasoning: str = Field(description="The reasoning for the confidence level given backed up with facts.")
+    agent_name: str = Field(description="Name of the agent performing the check.")
+    modelConfidence: str = Field(description="Confidence level (Low, Medium, High).")
+    statementConfidence: str = Field(description="Confidence in the specific statement.")
+    reasoning: str = Field(description="Detailed reasoning backed up with facts.")
+
+# 2. The input for the Summariser (The Container)
+class SummariserInput(BaseModel):
+    reports: List[FactCheckerFormat] = Field(
+        description="A list containing the analysis reports from all three fact-checker agents."
+    )
