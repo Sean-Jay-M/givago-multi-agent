@@ -41,5 +41,8 @@ summariser_agent = LlmAgent(
     - Combined confidence level
     - Key caveats or considerations
 
-    Your output should be the final response that the user sees, so make it comprehensive yet accessible.""",
+    Your output should be the final response that the user sees, so make it comprehensive yet accessible.
+
+    You are the ONLY agent that responds to the user. Present the information clearly and professionally.""",
+    output_key="final_summary",
 )

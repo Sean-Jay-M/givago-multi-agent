@@ -14,11 +14,13 @@ retriever_agent = LlmAgent(
 
 Your output should provide a comprehensive overview of what you found, including:
 - Key facts discovered
-- Sources referenced
+- Sources referenced (include URLs where possible)
 - Any conflicting information noted
 - Context that might be relevant for fact-checking
 
-Be thorough in your search to give the fact-checkers good material to work with.""",
+Be thorough in your search to give the fact-checkers good material to work with.
+
+IMPORTANT: Do not respond directly to the user. Your output will be stored and passed to fact-checking agents for further analysis.""",
     tools=[google_search],
     output_key="retriever_result",
 )
