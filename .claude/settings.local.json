@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(adk run:*)",
+      "Bash(python -m google.adk run:*)",
+      "Bash(pip search:*)",
+      "Bash(pip install:*)",
+      "Bash(where:*)",
+      "Bash(python -m google.adk:*)",
+      "Bash(\"C:\\Users\\SeanM\\AppData\\Roaming\\Python\\Python312\\Scripts\\adk.exe\" run my_agent)",
+      "Bash(python:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
