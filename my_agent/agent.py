@@ -1,6 +1,6 @@
 from google.adk.agents import SequentialAgent
 from .fact_checker_1.agent import fact_checker_agent
-from .summariser import summariser
+from my_agent.Summariser.agent import summariser
 
 # Root Agent - Sequential workflow: fact_checker -> summariser
 # The fact_checker runs first, stores its output in 'fact_check_result',

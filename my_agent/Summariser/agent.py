@@ -1,6 +1,6 @@
 from google.adk.agents import LlmAgent
 
-from .schemas import SummariserInput
+from my_agent.schemas import SummariserInput
 
 summariser = LlmAgent(
     model="gemini-2.5-flash",
